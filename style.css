@@ -1,111 +1,216 @@
-
 body {
-    margin:0 ;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
     color: rgb(255, 255, 255);
     background: black;
     font-family: "Open Sans", sans-serif;
-}
-.wrapper {
-    min-height: 100vh;
-    margin-top: 0%;
-    background:linear-gradient(to bottom,rgba(255, 64, 50, 0.8),rgba(71, 17, 116, 0.9) ), 
-     url(/images/background.jpg) no-repeat center/cover;
-     
-}
-.top{
-    font-family: "Open Sans", sans-serif;
-    display:flex;
-    justify-content: space-between;
-    align-items: center;
-    padding-left: 1.5%;
-    padding-right: 1.5%;
-}
-.logo{
-    display:flex;
-    margin-top: 1%;
+    overflow: hidden;
 }
 
-.logo img{
-    width:120px;
-    height:28px;
+img {
+    width: 100%;
 }
-.text{
-    display:flex;
-    margin-top: 1%;
+
+.wrapper {
+    min-height: 100vh;
+    background: linear-gradient(to bottom, rgba(255, 64, 50, 0.8), rgba(71, 17, 116, 0.9)),
+        url(/images/background.jpg) no-repeat center/cover;
+
+}
+
+.top {
+    font-family: "Open Sans", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.logo {
+    display: flex;
+}
+
+.logo img {
+    width: 120px;
+    height: 28px;
+}
+
+.text {
+    display: flex;
     gap: 20px;
 }
-.link{
+
+.link {
     color: rgb(246, 246, 246);
 }
-.top i{
+
+.top i {
     margin-right: 7px;
 }
-.content{
+
+.content {
+    padding: 16px;
     margin-top: 10%;
-    margin-left: 17%;
+    margin-left: auto;
+    margin-right: auto;
     display: flex;
     align-items: center;
     gap: 50px;
     justify-content: space-around;
     width: 100%;
     max-width: 800px;
-    
 }
-.group input,.group textarea{
-   
-    
-     margin-bottom: 10px;
-     border: 0;
-     outline: 0;
-     border-radius: 8px;
-     width: 300px;
-     height: 30px;
-     background: rgba(255, 255, 255, 0.2);
- 
- }
- .group textarea{
+
+form {
+    width: 100%;
+}
+
+.group input,
+.group textarea {
+
+
+    margin-bottom: 10px;
+    border: 0;
+    outline: 0;
+    border-radius: 8px;
+    width: 300px;
+    height: 30px;
+    background: rgba(255, 255, 255, 0.2);
+
+}
+
+.group textarea {
     min-height: 100px;
     resize: none;
     overflow: hidden;
     border-radius: 4px;
- }
-.group label{
+}
+
+.group label {
     font-size: 20px;
     margin-bottom: 4px;
-   display: block;
+    display: block;
 
 }
-.main h1{
+
+.main h1 {
     font-size: 40px;
     width: auto;
-    line-height:1.2;
+    line-height: 1.2;
     margin-top: 0px;
     margin-bottom: 0px;
 }
-.main p{
+
+.main p {
     font-size: 20px;
-    line-height:1.2;
+    line-height: 1.2;
 
-   
+
 }
+
 .form button {
-width: 100%;
-height: 38px;
-border-radius: 20px;
-background: orangered;
-color: aliceblue;
-border: 0cap;
-box-shadow: none;
-cursor: pointer;
-font-size: 19px;
+    width: 100%;
+    height: 38px;
+    border-radius: 20px;
+    background: orangered;
+    color: aliceblue;
+    border: 0cap;
+    box-shadow: none;
+    cursor: pointer;
+    font-size: 19px;
 }
+
 .form button:hover {
-  background: rgb(117, 5, 5);
+    background: rgb(117, 5, 5);
 
 }
-.text a:hover{
+
+.text a:hover {
     color: rgb(12, 0, 239);
 }
 
+.burger {
+    display: none;
+}
+
+.nav-drawer {
+    position: absolute;
+    top: 0px;
+    right: -450px;
+    width: 300px;
+    padding: 10px;
+    background-color: white;
+    height: 100vh;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.3s ease-in;
+}
+
+.show-drawer {
+    right: 0px !important;
+}
+
+.close {
+    width: 50px;
+    cursor: pointer;
+}
+
+@media screen and (max-width: 890px) {
+    
+
+
+    .content {
+        flex-direction: column-reverse;
+    }
+
+    .content .main {
+        text-align: center;
+        overflow: hidden;
+    }
+
+    .group input,
+    .group textarea {
+        width: 100%;
+    }
+
+    .top {
+        display: none;
+    }
+
+    .burger {
+        display: flex;
+        justify-content: flex-end;
+        padding: 10px;
+    }
+
+    main p {
+        font-size: 10px;
+        padding: 10px;
+    }
+
+    form {
+        width: 90%;
+        margin: 0 auto;
+    }
+
+
+
+    .menu {
+        width: 50px;
+        cursor: pointer;
+    }
+
+    
+
+    .content {
+        margin-top: 0;
+        width: 100%;
+        gap: 0px;
+        justify-content: flex-start;
+    }
+
+    .main {
+        width: 100%;
+    }
+}
